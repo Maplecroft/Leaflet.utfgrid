@@ -108,7 +108,9 @@ L.UtfGrid = L.Class.extend({
 				if (this.options.pointerCursor) {
 					this._container.style.cursor = 'pointer';
 				}
-			}
+			} else {
+        this.fire('mouseoff', on);
+      }
 
 			this._mouseOn = on.data;
 		} else if (on.data) {

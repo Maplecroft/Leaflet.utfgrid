@@ -30,13 +30,22 @@ utfGrid.on('click', function (e) {
 	}
 });
 utfGrid.on('mouseover', function (e) {
+	// Fired when the mouse is over a part of the grid.
 	console.log('hover: ' + e.data.admin);
 });
 utfGrid.on('mousemove', function (e) {
+    // Fired when the mouse is moved.
 	console.log('move: ' + e.data.admin);
 });
 utfGrid.on('mouseout', function (e) {
+	// Fired when the mouse leaves a region; in this case the event carries the
+	// old region's data.
 	console.log('unhover: ' + e.data.admin);
+});
+utfGrid.on('mouseoff', function (e) {
+	// Fired when the mouse leaves the grid, i.e. there is no data for that
+	// location.
+	console.log('mouseoff');
 });
 ```
 

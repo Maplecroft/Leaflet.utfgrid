@@ -33,17 +33,15 @@
 			} else {
 				document.getElementById('click').innerHTML = 'click: nothing';
 			}
-		}); 
+		});
 		utfGrid.on('mouseover', function (e) {
 			if (e.data) {
 				document.getElementById('hover').innerHTML = 'hover: ' + e.data.admin;
-			} else {
-				document.getElementById('hover').innerHTML = 'hover: nothing';
 			}
 			//console.log('mouseover: ' + e.data);
 		});
 		utfGrid.on('mouseout', function (e) {
-			//console.log('mouseout: ' + e.data);
+			document.getElementById('hover').innerHTML = 'hover: nothing';
 		});
 
 		var map = L.map('map')

@@ -148,7 +148,7 @@ L.UtfGrid = L.Class.extend({
 			result = null;
 		}
 
-		return { latlng: e.latlng, data: result};
+		return { latlng: e.latlng, data: result, gridKey: key };
 	},
 
 	//Load up all required json grid files
